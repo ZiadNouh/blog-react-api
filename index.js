@@ -8,8 +8,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const postsFilePath = path.join(process.cwd(), "server", "posts.json");
-const usersFilePath = path.join(process.cwd(), "server", "users.json");
+const postsFilePath = path.join(process.cwd(), "posts.json");
+const usersFilePath = path.join(process.cwd(), "users.json");
 
 let posts = JSON.parse(fs.readFileSync(postsFilePath, "utf8")) || [];
 let users = JSON.parse(fs.readFileSync(usersFilePath, "utf8")) || [];
